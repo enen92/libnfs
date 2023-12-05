@@ -2514,7 +2514,7 @@ nfs_find_local_servers(void)
     return NULL;
   }
 
-  if (rpc_bind_udp(rpc, "0.0.0.0", 0) < 0)
+  if (rpc_bind_udp(rpc, "192.168.1.255", 0) < 0)
   {
     rpc_destroy_context(rpc);
     return NULL;
@@ -2657,7 +2657,7 @@ nfs_find_local_servers(void)
 		return NULL;
 	}
 
-	if (rpc_bind_udp(rpc, "0.0.0.0", 0) < 0) {
+	if (rpc_bind_udp(rpc, "192.168.1.255", 0) < 0) {
 		rpc_destroy_context(rpc);
 		return NULL;
 	}
